@@ -13,3 +13,11 @@
   components:
   - type: AccessReader
     access: [["Mantis"]]
+
+- type: entity
+  parent: AirlockMaintRnDLocked
+  id: AirlockMaintMantisLocked
+  suffix: Mantis, Locked
+  components:
+  - type: AccessReader
+    access: [["Mantis"]]
