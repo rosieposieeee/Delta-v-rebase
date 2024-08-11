@@ -29,7 +29,7 @@
 - type: entity
   parent: AirlockCommandGlass
   id: AirlockChiefJusticeGlassLocked
-  suffix: ChiefJustice, Locked
+  suffix: Chief Justice, Locked
   components:
   - type: ContainerFill
     containers:
@@ -71,6 +71,24 @@
     containers:
       board: [ DoorElectronicsProsecutor ]
 
+- type: entity
+  parent: AirlockJustice
+  id: AirlockClerkLocked
+  suffix: Clerk, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsClerk ]
+
+- type: entity
+  parent: AirlockJusticeGlass
+  id: AirlockClerkGlassLocked
+  suffix: Clerk, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsClerk ]
+
 # Maintenance
 - type: entity
   parent: AirlockMaint
@@ -100,6 +118,15 @@
       board: [ DoorElectronicsProsecutor ]
 
 - type: entity
+  parent: AirlockMaint
+  id: AirlockMaintClerkLocked
+  suffix: Clerk, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsClerk ]
+
+- type: entity
   parent: AirlockSecurity
   id: AirlockCorpsmanLocked
   suffix: Corpsman, Locked
@@ -127,7 +154,7 @@
     - type: GridFill
       path: /Maps/Shuttles/DeltaV/sub_escape_pod.yml
 
-# Delta V: Add Airlocks/upstream roles
+#Add airlocks from upstream roles
 - type: entity
   parent: AirlockServiceLocked
   id: AirlockBoxerLocked
