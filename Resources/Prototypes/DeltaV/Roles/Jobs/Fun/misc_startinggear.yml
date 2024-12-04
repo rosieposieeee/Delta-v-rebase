@@ -1,7 +1,3 @@
-#Delta-V - This file is licensed under AGPLv3
-# Copyright (c) 2024 Delta-V Contributors
-# See AGPLv3.txt for details.
-
 #Misc outfit startingGear definitions.
 
 # Laika sec glasses
@@ -66,4 +62,6 @@
     gloves: ClothingHandsGlovesCombat
     shoes: ClothingShoesSlippers
     id: SyndiListeningPostPDA
+    back: ClothingBackpackSyndicate
+    pocket1: AgentIDCard
 #  innerClothingSkirt: ClothingUniformJumpsuitPyjamaSyndicatePink # I don't think loadouts work for ghost roles anyways

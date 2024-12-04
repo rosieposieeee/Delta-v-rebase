@@ -24,6 +24,7 @@
   - External
   - Detective
   - Cryogenics
+  - Corpsman #Delta V: Corpsman is actively implemented, warden requires access to the treatment of their prisoners.
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]
@@ -34,8 +35,8 @@
     eyes: ClothingEyesGlassesSecurity
     id: WardenPDA
     ears: ClothingHeadsetSecurity
-    pocket1: WeaponPistolMk58Nonlethal
+  #  pocket1: WeaponPistolMk58Nonlethal # DeltaV - loadouts
   storage:
     back:
     - Flash
-    - MagazinePistol
+  # - MagazinePistol # DeltaV - loadouts

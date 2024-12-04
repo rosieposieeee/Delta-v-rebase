@@ -15,15 +15,13 @@
       time: 36000 # 10 hours
     - !type:OverallPlaytimeRequirement
       time: 90000 # DeltaV - 25 hours, was 40
-    - !type:WhitelistRequirement # DeltaV - Whitelist requirement
-    - !type:AgeRequirement
-      requiredAge: 21
   weight: 10
   startingGear: HoSGear
   icon: "JobIconHeadOfSecurity"
   requireAdminNotify: true
   supervisors: job-supervisors-captain
   canBeAntag: false
+  whitelisted: true # DeltaV
   access:
   - HeadOfSecurity
   - Command
@@ -54,8 +52,8 @@
     id: HoSPDA
     gloves: ClothingHandsGlovesCombat
     ears: ClothingHeadsetAltSecurity
-    pocket1: WeaponPistolMk58Nonlethal
+  #  pocket1: WeaponPistolMk58Nonlethal # DeltaV - loadouts
   storage:
     back:
     - Flash
-    - MagazinePistol
+  # - MagazinePistol # DeltaV - loadouts

@@ -89,7 +89,7 @@
   id: Autolathe
   parent: BaseLatheLube
   name: autolathe
-  description: It produces basic items using metal and glass.
+  description: It produces basic items using metal and glass. Has the ability to process blueprints to print new recipes.
   components:
   - type: Sprite
     sprite: Structures/Machines/autolathe.rsi
@@ -137,8 +137,6 @@
       - AirTank
       - GasAnalyzer
       - UtilityBelt
-      - Fulton
-      - FultonBeacon
       - Pickaxe
       - ModularReceiver
       - AppraisalTool
@@ -165,6 +163,7 @@
       - FoodPlateSmallPlastic
       - FoodBowlBig
       - FoodPlateTin
+      - FoodPlateMuffinTin
       - FoodKebabSkewer
       - SprayBottle
       - MopItem
@@ -200,10 +199,16 @@
       - ClothingHeadHatWelding
       - WetFloorSign
       - ClothingHeadHatCone
+      - FreezerElectronics
+      # Begin Delta-V additions
+      - GoldRing
+      - SilverRing
+      - GoldRingDiamond
+      - SilverRingDiamond
+      # End Delta-V additions
   - type: EmagLatheRecipes
     emagStaticRecipes:
       - BoxLethalshot
-      - BoxShotgunFlare
       - BoxShotgunSlug
       - CombatKnife
       - MagazineBoxLightRifle
@@ -231,7 +236,20 @@
       - SpeedLoaderSpecialEmpty
       - SpeedLoaderSpecialPractice
       - MagazineBoxSpecial
+      - MagazinePistolSpecial
       # End of modified code
+  - type: BlueprintReceiver
+    whitelist:
+      tags:
+      - BlueprintAutolathe
+  - type: ContainerContainer
+    containers:
+      machine_board: !type:Container
+      machine_parts: !type:Container
+      blueprint: !type:Container
+  - type: EmptyOnMachineDeconstruct
+    containers:
+    - blueprint
 
 - type: entity
   id: AutolatheHyperConvection
@@ -287,7 +305,6 @@
       - AnomalyScanner
       - AnomalyLocator
       - AnomalyLocatorWide
-      - HandheldCrewMonitor # DeltaV
       - Scalpel
       - Retractor
       - Cautery
@@ -319,6 +336,8 @@
       - PowerCellHigh
       - WeaponPistolCHIMP
       - ClothingMaskWeldingGas
+      - MineralScannerEmpty
+      - AdvancedMineralScannerEmpty
       - WeaponGauntletGorilla
       - SynthesizerInstrument
       - ClothingShoesBootsMagSci
@@ -331,23 +350,30 @@
       #- WeaponForceGun # DeltaV
       - WeaponLaserSvalinn
       - WeaponProtoKineticAccelerator
-      #- WeaponTetherGun # DeltaV
       - WeaponGrapplingGun
+      #- WeaponTetherGun # DeltaV
       - ClothingBackpackHolding
       - ClothingBackpackSatchelHolding
       - ClothingBackpackDuffelHolding
       - WelderExperimental
       - JawsOfLife
-      - CoreSilver # Nyanotrasen - Silver Golem core
       - FauxTileAstroGrass
       - FauxTileMowedAstroGrass
       - FauxTileJungleAstroGrass
       - FauxTileAstroIce
       - FauxTileAstroSnow
       - OreBagOfHolding
-      - PlantBagOfHolding #DeltaV
       - DeviceQuantumSpinInverter
-      - RCDAmmo # DeltaV
+      # Begin DeltaV additions
+      - CoreSilver # Nyanotrasen - Silver Golem core
+      - HandheldCrewMonitor
+      - PlantBagOfHolding
+      - RCDAmmo
+      - Fulton
+      - FultonBeacon
+      - PowerCellHyper
+      - FireExtinguisherBluespace
+      # End DeltaV additions
   - type: EmagLatheRecipes
     emagDynamicRecipes:
       - BoxBeanbag
@@ -410,6 +436,10 @@
       - MagazineBoxSpecialUranium
       - MagazineBoxSpecialHoly
       - MagazineBoxSpecialMindbreaker
+      - AdvancedTruncheon
+      - LauncherSyringe
+      - MiniSyringe
+      - WeaponBeamCannon
       # End DeltaV additions
 
 - type: entity
@@ -450,6 +480,7 @@
     - ProtolatheMachineCircuitboard
     - AutolatheMachineCircuitboard
     - CircuitImprinterMachineCircuitboard
+    - BiogeneratorMachineCircuitboard
     - OreProcessorMachineCircuitboard
     - ElectrolysisUnitMachineCircuitboard
     - CentrifugeMachineCircuitboard
@@ -460,6 +491,7 @@
     - UniformPrinterMachineCircuitboard
     - FloorGreenCircuit
     - FloorBlueCircuit
+    - FloorRedCircuit
     - MicrowaveMachineCircuitboard
     - ReagentGrinderMachineCircuitboard
     - ElectricGrillMachineCircuitboard
@@ -468,6 +500,8 @@
     - DeepFryerMachineCircuitboard #Nyano - Summary: adds deep fryer circuit board
     - SpaceHeaterMachineCircuitBoard
     - CutterMachineCircuitboard
+    - StationAnchorCircuitboard
+    - SalvageMagnetMachineCircuitboard
     dynamicRecipes:
       - ThermomachineFreezerMachineCircuitBoard
       - HellfireFreezerMachineCircuitBoard
@@ -515,8 +549,6 @@
       - PortableGeneratorPacmanMachineCircuitboard
       - PortableGeneratorSuperPacmanMachineCircuitboard
       - PortableGeneratorJrPacmanMachineCircuitboard
-      - WallmountGeneratorElectronics
-      - WallmountGeneratorAPUElectronics
       - WallmountSubstationElectronics
       - PowerCageRechargerCircuitboard
       - EmitterCircuitboard
@@ -541,7 +573,6 @@
     # Begin Nyano additions
       - ReverseEngineeringMachineCircuitboard
       - CrewMonitoringComputerCircuitboard
-      - SalvageMagnetMachineCircuitboard
       - MetempsychoticMachineCircuitboard
     # End Nyano additions
     # Begin DeltaV additions
@@ -601,11 +632,6 @@
     - BorgModuleFireExtinguisher
     - BorgModuleRadiationDetection
     - BorgModuleTool
-    - BorgModuleAppraisal
-    - BorgModuleConstruction
-    - BorgModuleService
-    - BorgModuleTreatment
-    - BorgModuleCleaning
     - CyborgEndoskeleton
     - LeftArmBorg
     - RightArmBorg
@@ -613,61 +639,15 @@
     - RightLegBorg
     - LightHeadBorg
     - TorsoBorg
-    - LeftArmBorgEngineer
-    - RightArmBorgEngineer
-    - LeftLegBorgEngineer
-    - RightLegBorgEngineer
-    - HeadBorgEngineer
-    - TorsoBorgEngineer
-    - LeftLegBorgJanitor
-    - RightLegBorgJanitor
-    - HeadBorgJanitor
-    - TorsoBorgJanitor
-    - LeftArmBorgMedical
-    - RightArmBorgMedical
-    - LeftLegBorgMedical
-    - RightLegBorgMedical
-    - HeadBorgMedical
-    - TorsoBorgMedical
-    - LeftArmBorgMining
-    - RightArmBorgMining
-    - LeftLegBorgMining
-    - RightLegBorgMining
-    - HeadBorgMining
-    - TorsoBorgMining
-    - LeftArmBorgService
-    - RightArmBorgService
-    - LeftLegBorgService
-    - RightLegBorgService
-    - HeadBorgService
-    - TorsoBorgService
-    # Delta-V : Start
-    - BorgModuleSecurityPeacekeeper
-    - BorgModuleSecurityPatrol
-    - BorgModuleSecurityBastion
-    - LeftArmBorgSecurity
-    - RightArmBorgSecurity
-    - LeftLegBorgSecurity
-    - RightLegBorgSecurity
-    - HeadBorgSecurity
-    - TorsoBorgSecurity
-    # Delta-V : End
     dynamicRecipes:
     - ProximitySensor
-    - BorgModuleLightReplacer
     - BorgModuleAdvancedCleaning
-    - BorgModuleMining
-    - BorgModuleGrapplingGun
     - BorgModuleAdvancedTool
     - BorgModuleGPS
-    - BorgModuleRCD
     - BorgModuleArtifact
     - BorgModuleAnomaly
     - BorgModuleGardening
     - BorgModuleHarvesting
-    - BorgModuleMusique
-    - BorgModuleClowning
-    - BorgModuleDiagnosis
     - BorgModuleDefibrillator
     - BorgModuleAdvancedTreatment
     - RipleyHarness
@@ -690,16 +670,17 @@
     - HamtrRLeg
     - VimHarness
   # Begin Nyano additions
-    - ClothingOuterHardsuitJuggernautReverseEngineered
-    - ClothingOuterHardsuitSyndieReverseEngineered
     - JetpackBlue
     - JetpackMini
   # End Nyano additions
   # DeltaV Start
-    - BorgModuleSecurityDeescalate
     - BorgModuleSecurityChase
     - BorgModuleSecurityEscalate
     - JetpackVoid
+  - type: EmagLatheRecipes
+    emagDynamicRecipes:
+    - ClothingOuterHardsuitJuggernautReverseEngineered
+    - ClothingOuterHardsuitSyndieReverseEngineered
   # DeltaV End
   - type: MaterialStorage
     whitelist:
@@ -784,7 +765,6 @@
     runningState: icon
     staticRecipes:
       - BoxLethalshot
-      - BoxShotgunFlare
       - BoxShotgunPractice
       - BoxShotgunSlug
       - ClothingEyesHudSecurity
@@ -821,6 +801,7 @@
       - TargetHuman
       - TargetSyndicate
       - WeaponDisablerPractice
+      - WeaponFlareGunSecurity
       - WeaponLaserCarbinePractice
       - Zipties
       # Begin DeltaV additions
@@ -863,7 +844,7 @@
       - MagazineRifleUranium
       - MagazineShotgunBeanbag
       - MagazineShotgunIncendiary
-      #- PortableRecharger # DeltaV - removed for some reason
+      - PortableRecharger
       - PowerCageHigh
       - PowerCageMedium
       - PowerCageSmall
@@ -909,6 +890,11 @@
       - MagazineBoxSpecialUranium
       - MagazineBoxSpecialHoly
       - MagazineBoxSpecialMindbreaker
+      - ClothingOuterHardsuitJuggernautReverseEngineered
+      - ClothingOuterHardsuitSyndieReverseEngineered
+      - ClothingShoesBootsSecurityMagboots
+      - AdvancedTruncheon
+      - WeaponBeamCannon
       # End DeltaV additions
   - type: MaterialStorage
     whitelist:
@@ -947,7 +933,6 @@
         - MagazineBoxSpecial
         # End of modified code
         - BoxLethalshot
-        - BoxShotgunFlare
         - BoxShotgunSlug
         - BoxShellTranquilizer
         - MagazineBoxLightRifle
@@ -1035,6 +1020,10 @@
       - WhiteCane
       - AACTablet # DeltaV
     dynamicRecipes:
+      # Begin DeltaV additions
+      - LauncherSyringe
+      - MiniSyringe
+      # End DeltaV additions
       - ChemicalPayload
       - CryostasisBeaker
       - BluespaceBeaker
@@ -1196,14 +1185,6 @@
       - ClothingOuterWinterQM
       - ClothingOuterWinterRD
       - ClothingOuterChiefJustice # DeltaV - Chief Justice
-      - ClothingNeckMantleCap
-      - ClothingNeckMantleCE
-      - ClothingNeckMantleCMO
-      - ClothingNeckMantleHOP
-      - ClothingNeckMantleHOS
-      - ClothingNeckMantleRD
-      - ClothingNeckMantleQM
-      - ClothingNeckCloakCJ # DeltaV - Chief Justice
       - ClothingOuterStasecSweater # DeltaV - added stasec sweater to uniform printer.
       - ClothingOuterWinterMusician
       - ClothingOuterWinterClown
@@ -1278,6 +1259,68 @@
         - Sheet
         - RawMaterial
         - Ingot
+
+- type: entity
+  id: Biogenerator
+  parent: BaseLathe
+  name: biogenerator
+  description: Converts plants into biomass, which can be used to construct useful items.
+  components:
+  - type: Sprite
+    sprite: Structures/Machines/biofabricator.rsi
+    snapCardinals: true
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Machine
+    board: BiogeneratorMachineCircuitboard
+  - type: MaterialStorage
+  - type: ProduceMaterialExtractor
+  - type: ItemSlots
+    slots:
+      beaker_slot:
+        name: lathe-component-output-slot-beaker-name
+        whitelist:
+          components:
+          - FitsInDispenser
+  - type: ContainerContainer
+    containers:
+      machine_board: !type:Container
+      machine_parts: !type:Container
+      beaker_slot: !type:ContainerSlot
+  - type: Lathe
+    reagentOutputSlotId: beaker_slot
+    idleState: icon
+    runningState: building
+    staticRecipes:
+    - BioGenMilk
+    - BioGenMilkSoy
+    - BioGenEthanol
+    - BioGenCream
+    - BioGenBlackpepper
+    - BioGenEnzyme
+    - BioGenFlour
+    - BioGenSugar
+    - BioGenMonkeyCube
+    - BioGenKoboldCube
+    - BioGenMaterialCloth1
+    - BioGenMaterialCardboard1
+    - BioGenPaper
+    - BioGenPaperRolling1
+    - BioGenCandle
+    - BioGenPlantBGone
+    - BioGenWeedKiller
+    - BioGenPestKiller
+    - BioGenLeft4Zed
+    - BioGenEZNutrient
+    - BioGenRobustHarvest
 
 - type: entity
   parent: BaseLathe

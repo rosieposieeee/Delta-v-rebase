@@ -21,6 +21,8 @@ job-name-hop = Head of Personnel
 job-name-captain = Captain
 job-name-serviceworker = Service Worker
 job-name-centcomoff = CentComm Official
+job-name-cburn = Centcomm Quarantine Officer
+job-name-deathsquad = Centcomm Agent
 job-name-reporter = Reporter
 job-name-musician = Musician
 job-name-librarian = Librarian
@@ -33,8 +35,10 @@ job-name-chaplain = Chaplain
 job-name-botanist = Botanist
 job-name-bartender = Bartender
 job-name-passenger = Passenger
-job-name-salvagespec = Salvage specialist
-job-name-qm = Logistics Officer
+job-name-salvagespec = Salvage Specialist
+job-name-station-ai = Station AI
+# DeltaV - Hopefully makes LO maintaining easier
+# job-name-qm = Quartermaster
 job-name-cargotech = Cargo Technician
 job-name-chef = Chef
 job-name-clown = Clown
@@ -59,6 +63,11 @@ job-name-syndicate = Syndicate
 job-name-unknown = Unknown
 job-name-virologist = Virologist
 job-name-zombie = Zombie
+
+# Job titles
+job-title-visitor = Visitor
+job-title-cluwne = Cluwne
+job-title-universal = Universal
 
 # Role timers - Make these alphabetical or I cut you
 JobAtmosphericTechnician = Atmospheric Technician
@@ -104,6 +113,7 @@ JobScientist = Scientist
 JobSecurityCadet = Security Cadet
 JobSecurityOfficer = Security Officer
 JobServiceWorker = Service Worker
+JobStationAi = Station AI
 JobStationEngineer = Station Engineer
 JobTechnicalAssistant = Technical Assistant
 JobVisitor = Visitor
