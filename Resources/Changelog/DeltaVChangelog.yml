@@ -1,73 +1,4 @@
 ﻿Entries:
-- author: NullWanderer
-  changes:
-  - message: Merged upstream
-    type: Add
-  id: 338
-  time: '2024-05-07T20:50:32.0000000+00:00'
-  url: https://github.com/DeltaV-Station/Delta-v/pull/1170
-- author: NullWanderer
-  changes:
-  - message: Fixed some of the harpies emotes that had previously broken with merges
-    type: Fix
-  - message: Futureproofed harpy emotes by allowing conflicting chat triggers to exist.
-      If you notice sounds playing twice, please report them.
-    type: Tweak
-  id: 339
-  time: '2024-05-07T23:49:26.865090+00:00'
-  url: null
-- author: WarMechanic
-  changes:
-  - message: Added the IgnoreStripHidden variable to ThievingComponent, which allows
-      entities to look into the pockets of mobs it strips.
-    type: Tweak
-  - message: Added the StripTimeMultiplier variable to ThievingComponent, which multiplies
-      strip time.
-    type: Tweak
-  - message: Felinids and Admin Observers are now able to identify items in pockets
-      of other players. Felinids also gain a faster strip speed.
-    type: Add
-  id: 340
-  time: '2024-05-09T04:40:31.0000000+00:00'
-  url: https://github.com/DeltaV-Station/Delta-v/pull/1102
-- author: Remuchi
-  changes:
-  - message: Security dogs (such as Laika) now have vulpkanin vocal emotes. Howl!
-    type: Add
-  id: 341
-  time: '2024-05-09T20:07:41.0000000+00:00'
-  url: https://github.com/DeltaV-Station/Delta-v/pull/1176
-- author: Velcroboy
-  changes:
-  - message: Fixed announcement screens not showing ETA/ETD of evac shuttles
-    type: Fix
-  id: 342
-  time: '2024-05-09T22:27:16.0000000+00:00'
-  url: https://github.com/DeltaV-Station/Delta-v/pull/1178
-- author: angelofallars
-  changes:
-  - message: Unflipped the hands of Felinids, Vulpkanins, and Harpies. Their direction
-      on the UI should now be consistent with other species.
-    type: Fix
-  id: 343
-  time: '2024-05-14T14:27:26.0000000+00:00'
-  url: https://github.com/DeltaV-Station/Delta-v/pull/1194
-- author: Colin-Tel
-  changes:
-  - message: Updated Asterisk station with several QoL changes and a higher max population.
-    type: Tweak
-  id: 344
-  time: '2024-05-14T14:45:40.0000000+00:00'
-  url: https://github.com/DeltaV-Station/Delta-v/pull/1193
-- author: angelofallars
-  changes:
-  - message: 'Makeup is finally here: lips, blush, and nail polish! Head over to Character
-      Setup in the Markings section, then look at Head/Overlay to give your characters
-      the makeover they deserve!'
-    type: Add
-  id: 345
-  time: '2024-05-14T17:13:45.0000000+00:00'
-  url: https://github.com/DeltaV-Station/Delta-v/pull/1191
 - author: Mnemotechnician
   changes:
   - message: You can now sign paper by alt-clicking it while holding a pen.
@@ -3836,3 +3767,62 @@
   id: 837
   time: '2025-01-01T20:31:46.0000000+00:00'
   url: https://github.com/DeltaV-Station/Delta-v/pull/2580
+- author: Velcroboy
+  changes:
+  - message: The Hive kitchen and botany has flipped locations with arcade and library.
+    type: Tweak
+  id: 838
+  time: '2025-01-02T05:03:04.0000000+00:00'
+  url: https://github.com/DeltaV-Station/Delta-v/pull/2551
+- author: Unkn0wnGh0st333
+  changes:
+  - message: Shoko is no longer christmasy and now has a bunch of cool things like
+      holopads. Bleh
+    type: Tweak
+  id: 839
+  time: '2025-01-02T06:09:56.0000000+00:00'
+  url: https://github.com/DeltaV-Station/Delta-v/pull/2530
+- author: Colin-Tel
+  changes:
+  - message: Added current Patreon supporters to the credits. Check them out in the
+      lower-left corner of the lobby!
+    type: Add
+  id: 840
+  time: '2025-01-02T16:07:04.0000000+00:00'
+  url: https://github.com/DeltaV-Station/Delta-v/pull/2582
+- author: DisposableCrewmember42
+  changes:
+  - message: Cleanbots can now move beneath tables
+    type: Tweak
+  id: 841
+  time: '2025-01-02T16:11:08.0000000+00:00'
+  url: https://github.com/DeltaV-Station/Delta-v/pull/2583
+- author: Unkn0wnGh0st333
+  changes:
+  - message: Clippy from Frontier has been transferred to DeltaV stations! Couriers
+      now have a new pet and bag to unlock!
+    type: Add
+  id: 842
+  time: '2025-01-02T22:14:52.0000000+00:00'
+  url: https://github.com/DeltaV-Station/Delta-v/pull/2487
+- author: Stop-Signs
+  changes:
+  - message: Butlertron now gives more accurate requests/rewards based on recipe difficulty.
+    type: Tweak
+  id: 843
+  time: '2025-01-02T22:15:36.0000000+00:00'
+  url: https://github.com/DeltaV-Station/Delta-v/pull/2500
+- author: deltanedas
+  changes:
+  - message: More mice and mothroaches can come out of vents, a lot more...
+    type: Tweak
+  id: 844
+  time: '2025-01-02T22:18:09.0000000+00:00'
+  url: https://github.com/DeltaV-Station/Delta-v/pull/2518
+- author: jtbill123
+  changes:
+  - message: Added a recipe for Dead Rum. MORE DRINKS!
+    type: Add
+  id: 845
+  time: '2025-01-02T22:27:22.0000000+00:00'
+  url: https://github.com/DeltaV-Station/Delta-v/pull/2202
