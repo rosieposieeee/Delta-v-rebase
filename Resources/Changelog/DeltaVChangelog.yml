@@ -1,19 +1,4 @@
 ﻿Entries:
-- author: Colin-Tel
-  changes:
-  - message: Added Micro station! It can appear in lobbies no larger than 35.
-    type: Add
-  id: 369
-  time: '2024-05-29T04:10:40.0000000+00:00'
-  url: https://github.com/DeltaV-Station/Delta-v/pull/1251
-- author: Colin-Tel
-  changes:
-  - message: Micro now has a second solar array in the southeast of the station, and
-      its arrivals should function as an alternate evac.
-    type: Tweak
-  id: 370
-  time: '2024-05-31T23:15:41.0000000+00:00'
-  url: https://github.com/DeltaV-Station/Delta-v/pull/1274
 - author: NullWanderer
   changes:
   - message: Merged upstream. Please report any bugs
@@ -3841,3 +3826,17 @@
   id: 868
   time: '2025-01-06T05:35:48.0000000+00:00'
   url: https://github.com/DeltaV-Station/Delta-v/pull/2305
+- author: deltanedas
+  changes:
+  - message: Fixed holopads not letting the AI hear anything.
+    type: Fix
+  id: 869
+  time: '2025-01-06T17:14:57.0000000+00:00'
+  url: https://github.com/DeltaV-Station/Delta-v/pull/2631
+- author: FieldCommand
+  changes:
+  - message: Minor tweaks to Byoin
+    type: Tweak
+  id: 870
+  time: '2025-01-06T18:18:42.0000000+00:00'
+  url: https://github.com/DeltaV-Station/Delta-v/pull/2624
