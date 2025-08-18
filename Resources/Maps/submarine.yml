@@ -4,8 +4,8 @@ meta:
   engineVersion: 262.0.0
   forkId: ""
   forkVersion: ""
-  time: 08/18/2025 20:55:26
-  entityCount: 8830
+  time: 08/18/2025 20:59:58
+  entityCount: 8835
 maps:
 - 1
 grids:
@@ -628,6 +628,8 @@ entities:
         chunkSize: 4
     - type: GasTileOverlay
     - type: RadiationGridResistance
+    - type: BecomesStation
+      id: Submarine
 - proto: AcousticGuitarInstrument
   entities:
   - uid: 2122
@@ -27740,6 +27742,33 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 39.5,20.5
+      parent: 2
+- proto: SpawnPointPassenger
+  entities:
+  - uid: 8831
+    components:
+    - type: Transform
+      pos: -1.5,-92.5
+      parent: 2
+  - uid: 8832
+    components:
+    - type: Transform
+      pos: -0.5,-92.5
+      parent: 2
+  - uid: 8833
+    components:
+    - type: Transform
+      pos: 0.5,-92.5
+      parent: 2
+  - uid: 8834
+    components:
+    - type: Transform
+      pos: 1.5,-92.5
+      parent: 2
+  - uid: 8835
+    components:
+    - type: Transform
+      pos: 2.5,-92.5
       parent: 2
 - proto: SS13Memorial
   entities:
