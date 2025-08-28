@@ -1,117 +1,4 @@
 ﻿Entries:
-- author: Avalon-Proto
-  changes:
-  - message: Secborg equipment has been reassessed and redesigned, go out there and
-      show em what you're made of peacekeepers!
-    type: Tweak
-  id: 1126
-  time: '2025-03-09T18:47:41.0000000+00:00'
-  url: https://github.com/DeltaV-Station/Delta-v/pull/2059
-- author: Velcroboy
-  changes:
-  - message: Arena security has an evidence room now and some additional tweaks.
-    type: Tweak
-  id: 1127
-  time: '2025-03-09T20:38:44.0000000+00:00'
-  url: https://github.com/DeltaV-Station/Delta-v/pull/3165
-- author: IAmNotGray
-  changes:
-  - message: Elegance has been changed up slightly. The Examination Room has been
-      updated, and freezers are now cold.
-    type: Tweak
-  id: 1128
-  time: '2025-03-09T21:44:37.0000000+00:00'
-  url: https://github.com/DeltaV-Station/Delta-v/pull/3157
-- author: deltanedas
-  changes:
-  - message: Pressing F1 is back to immediately opening AHelp, hold shift to open
-      curator chat.
-    type: Tweak
-  id: 1129
-  time: '2025-03-10T02:19:32.0000000+00:00'
-  url: https://github.com/DeltaV-Station/Delta-v/pull/3176
-- author: deltanedas
-  changes:
-  - message: Fixed robo-neuroticists not being able to lock their evil borgs.
-    type: Fix
-  id: 1130
-  time: '2025-03-10T03:07:54.0000000+00:00'
-  url: https://github.com/DeltaV-Station/Delta-v/pull/3177
-- author: deltanedas
-  changes:
-  - message: Removed raffles from carp ghost roles. Rrrr!
-    type: Tweak
-  id: 1131
-  time: '2025-03-10T07:31:34.0000000+00:00'
-  url: https://github.com/DeltaV-Station/Delta-v/pull/3178
-- author: deltanedas
-  changes:
-  - message: Added lathe upgrade kits to the Industrial Engineering tech, they can
-      be used on any kind of lathe including techfabs.
-    type: Add
-  - message: Added the cryo-stabilizing lathe upgrade kit, it makes lathes faster
-      in exchange for freezing the air.
-    type: Add
-  id: 1132
-  time: '2025-03-10T19:26:33.0000000+00:00'
-  url: https://github.com/DeltaV-Station/Delta-v/pull/3169
-- author: deltanedas
-  changes:
-  - message: Added a new T3 industrial tech, Matter-Energy Conversion, which lets
-      you make self-recharging RCDs.
-    type: Add
-  - message: The borg RCD module now has to be reloaded with compressed matter or
-      replaced with a different RCD.
-    type: Tweak
-  id: 1133
-  time: '2025-03-10T20:19:17.0000000+00:00'
-  url: https://github.com/DeltaV-Station/Delta-v/pull/3168
-- author: Field Command
-  changes:
-  - message: Pebble is now as compliant as it can be with current mapping standards
-    type: Fix
-  id: 1134
-  time: '2025-03-10T23:55:51.0000000+00:00'
-  url: https://github.com/DeltaV-Station/Delta-v/pull/3186
-- author: sowelipililimute
-  changes:
-  - message: Departamental lathes can be emagged for access to weapons
-    type: Add
-  id: 1135
-  time: '2025-03-11T04:42:17.0000000+00:00'
-  url: https://github.com/DeltaV-Station/Delta-v/pull/3146
-- author: BlitzTheSquishy
-  changes:
-  - message: Feroxi now get tinned meat in their survival boxes instead of PSB, except
-      you mimes, you get to keep your freshly baked bread
-    type: Tweak
-  id: 1136
-  time: '2025-03-11T04:50:36.0000000+00:00'
-  url: https://github.com/DeltaV-Station/Delta-v/pull/3191
-- author: Radezolid
-  changes:
-  - message: The overlord board price is back to 10 TC with a possible discount to
-      7 TC.
-    type: Tweak
-  id: 1137
-  time: '2025-03-11T04:54:23.0000000+00:00'
-  url: https://github.com/DeltaV-Station/Delta-v/pull/3167
-- author: deltanedas
-  changes:
-  - message: Fixed not being able to install the escalation cyborg module.
-    type: Fix
-  id: 1138
-  time: '2025-03-11T05:22:28.0000000+00:00'
-  url: https://github.com/DeltaV-Station/Delta-v/pull/3193
-- author: Radezolid
-  changes:
-  - message: A salvage expeditions computer board spawns inside the LO's locker now.
-    type: Tweak
-  - message: Removed the salvage expeditions computer board from research and lathes.
-    type: Remove
-  id: 1139
-  time: '2025-03-11T15:23:27.0000000+00:00'
-  url: https://github.com/DeltaV-Station/Delta-v/pull/3166
 - author: dffdff2423, Aquif, MilonPL, sowelipililimute, Lyndomen
   changes:
   - message: You can now create medical, security, and employment records in the character
@@ -4109,3 +3996,152 @@
   id: 1625
   time: '2025-08-22T10:38:51.0000000+00:00'
   url: https://github.com/DeltaV-Station/Delta-v/pull/4245
+- author: NoElkaTheGod
+  changes:
+  - message: EMP no longer drains power from IPCs and cyborgs. Instead, it deals high
+      amount of ion damage, enough to instantly down the target in most cases. EMP
+      implants deal less daamge, though, so you will need all 3 charges to kill somoene
+      with it.
+    type: Tweak
+  id: 1626
+  time: '2025-08-23T08:39:03.0000000+00:00'
+  url: https://github.com/DeltaV-Station/Delta-v/pull/4255
+- author: cmorley191
+  changes:
+  - message: Fixed custom-named station beacons sometimes not being shown on the station
+      map UIs.
+    type: Fix
+  id: 1627
+  time: '2025-08-24T01:15:10.0000000+00:00'
+  url: https://github.com/DeltaV-Station/Delta-v/pull/4211
+- author: NoElkaTheGod
+  changes:
+  - message: Cosmic cult's conversion glyphs charging animation has been removed.
+    type: Remove
+  id: 1628
+  time: '2025-08-25T00:52:48.0000000+00:00'
+  url: https://github.com/DeltaV-Station/Delta-v/pull/4259
+- author: Halo3moth
+  changes:
+  - message: Python reduced to 4 tc.
+    type: Tweak
+  - message: Assault borg reduced to 40 tc.
+    type: Tweak
+  - message: Thermal suit pierce resistance brought up to 40%.
+    type: Tweak
+  - message: Thermal suit now cost 14 tc.
+    type: Tweak
+  id: 1629
+  time: '2025-08-25T01:34:46.0000000+00:00'
+  url: https://github.com/DeltaV-Station/Delta-v/pull/4177
+- author: NoElkaTheGod
+  changes:
+  - message: Entropic colossi now have increased damage and resistances. 15% reflect
+      chance has been removed, though.
+    type: Tweak
+  - message: Entropic colossi now take holy damage, but don't take structural damage
+      anymore.
+    type: Tweak
+  - message: Slumber Shell (colossus' healing) cooldown 120 -> 180 seconds.
+    type: Tweak
+  - message: Entropic colossi can no longer attack immediately after teleporting,
+      which allowed unavoidable one-shot kills.
+    type: Fix
+  - message: Midround entropic colossi now take 30 seconds to heal, just like ones
+      created by cult.
+    type: Fix
+  id: 1630
+  time: '2025-08-25T11:47:26.0000000+00:00'
+  url: https://github.com/DeltaV-Station/Delta-v/pull/4251
+- author: Field Command
+  changes:
+  - message: TEST MERGE, Arms dealers have been spotted in the sector! Adds a new
+      mid-round event.
+    type: Add
+  id: 1631
+  time: '2025-08-25T19:06:04.0000000+00:00'
+  url: https://github.com/DeltaV-Station/Delta-v/pull/4250
+- author: Stop-Signs
+  changes:
+  - message: 'TESTMERGE: The emergency shuttle travel time and docked time are shorter.'
+    type: Tweak
+  id: 1632
+  time: '2025-08-25T21:16:54.0000000+00:00'
+  url: https://github.com/DeltaV-Station/Delta-v/pull/4162
+- author: NoElkaTheGod
+  changes:
+  - message: IPCs no longer bleed.
+    type: Remove
+  - message: IPCs are no longer immune to barotrauma damage, be that from space or
+      standing in a burn chamber.
+    type: Tweak
+  id: 1633
+  time: '2025-08-26T10:44:12.0000000+00:00'
+  url: https://github.com/DeltaV-Station/Delta-v/pull/4258
+- author: Proxysseia
+  changes:
+  - message: removed Trials
+    type: Remove
+  - message: added hearings, a quicker way to check if you have the right guy
+    type: Add
+  - message: you can no longer 'detain' people. Just put the cuffs on them.
+    type: Remove
+  - message: being coerced into crime is now a legal defense
+    type: Add
+  - message: Procedural Defense is now a right outside of trial
+    type: Add
+  - message: Permanent Prisoners may now receive solitary confinement as a punishment
+    type: Add
+  - message: Permanent Prisoners pending a hearing may be released after being implanted
+      with a tracker
+    type: Add
+  - message: removed decorp as a valid capital sentence
+    type: Remove
+  - message: civil trials are no longer spelled out in SoP, doesnt mean you can't
+      do them anymore though.
+    type: Remove
+  - message: evidence now is secured in the Justice department
+    type: Tweak
+  - message: and much more, re-read the "Security and Justice Regulations" in SoP,
+      i promise its shorter now.
+    type: Tweak
+  id: 1634
+  time: '2025-08-26T16:49:36.0000000+00:00'
+  url: https://github.com/DeltaV-Station/Delta-v/pull/4199
+- author: AlgisAlphonse
+  changes:
+  - message: Added a "Toggle Power" link port for the automated robotic arms.
+    type: Tweak
+  id: 1635
+  time: '2025-08-26T20:05:18.0000000+00:00'
+  url: https://github.com/DeltaV-Station/Delta-v/pull/4117
+- author: NoElkaTheGod
+  changes:
+  - message: Cosmic cult's abilities got a rebalance. Check the PR for details.
+    type: Tweak
+  id: 1636
+  time: '2025-08-27T17:20:41.0000000+00:00'
+  url: https://github.com/DeltaV-Station/Delta-v/pull/4260
+- author: NoElkaTheGod
+  changes:
+  - message: Tweaked some values to make cult rounds faster and more dynamic.
+    type: Tweak
+  id: 1637
+  time: '2025-08-27T17:32:21.0000000+00:00'
+  url: https://github.com/DeltaV-Station/Delta-v/pull/4272
+- author: 0vrseer
+  changes:
+  - message: IPCs can heal again while empowered as a cultist
+    type: Fix
+  - message: IPCs can be deconverted from cultist
+    type: Fix
+  id: 1638
+  time: '2025-08-28T01:42:07.0000000+00:00'
+  url: https://github.com/DeltaV-Station/Delta-v/pull/4230
+- author: kotobdev
+  changes:
+  - message: Nukeops and Cosmic Cult now have the same chance to occur on Secret rounds.
+    type: Tweak
+  id: 1639
+  time: '2025-08-28T01:54:44.0000000+00:00'
+  url: https://github.com/DeltaV-Station/Delta-v/pull/4222
